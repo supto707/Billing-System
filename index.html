@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="button"] {
+            background-color: #3498DB;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        input[type="button"]:hover {
+            background-color: #34495E;
+        }
+    </style>
+    <!--Billing detaile-->
+    <div class="container">
+        <h2>Billing System</h2>
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" placeholder="Enter item name">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="Enter quantity">
+        <label for="price">Price per Unit:</label>
+        <input type="number" id="price" placeholder="Enter price per unit">
+        <input type="button" value="Add Item" onclick="addItem()">
+        <input type="button" value="Print & Save" onclick="printAndSave()">
+        <hr>
+        <h3>Invoice</h3>
+        <table id="invoiceTable" border="1" cellspacing="0" cellpadding="5" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Price per Unit</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Items will be added here -->
+            </tbody>
+        </table>
+        <hr>
+        <p>Total Amount: <span id="totalAmount">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
